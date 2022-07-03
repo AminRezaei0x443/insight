@@ -1,0 +1,93 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+
+.header {
+  z-index: 10;
+  @apply fixed;
+  @apply top-0;
+  @apply w-full;
+
+
+  @apply px-6;
+  @apply py-7;
+  @apply md:px-16;
+  @apply md:py-9;
+  @apply lg:px-28;
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+
+  backdrop-filter: blur(4px);
+  // background-color: rgba($default-background-color,0.3); 
+
+  h3 {
+    @apply text-3xl;
+    @apply md:text-4xl;
+    @apply m-0;
+    @apply font-bold;
+    color: $default-title-color;
+    z-index: -2;
+  }
+ 
+}
+
+.hamburgerMenu {
+  @apply inline;
+  @apply md:hidden;
+  
+  svg {
+    @include hover-darken;
+  }
+  
+  .container {
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.2);
+    backdrop-filter: blur(5px);
+  }
+  
+  ul {
+    @apply block;
+    @apply absolute;
+    background-color: $alternate-background-color;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 80px;
+    
+    
+    li {
+      @apply my-6;
+      text-align: center;
+
+      button{
+        @apply mx-auto;
+      }
+    }
+  }
+}
+
+.menu{
+  &Enter{
+    backdrop-filter: blur(0);
+    opacity:0;
+  }
+  &EnterActive{
+    transition: backdrop-filter 200ms, opacity 200ms;
+    backdrop-filter: blur(5);
+    opacity:1;
+  }
+  &Exit{
+    backdrop-filter: blur(5);
+    opacity:1;
+  }
+  &ExitActive{
+    transition: backdrop-filter 200ms, opacity 200ms;
+    backdrop-filter: blur(0);
+    opacity:0;
+  }
+}

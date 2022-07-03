@@ -1,0 +1,14 @@
+@import '../mixins';
+
+.socials{
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
+
+  a {
+    @apply w-8;
+    @apply mx-2;
+
+    @include hover-darken;
+  }
+}

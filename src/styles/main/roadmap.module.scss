@@ -1,0 +1,61 @@
+@import '../mixins';
+
+.container {
+  @include home-section;
+
+  margin-top:240px;
+  @screen md {
+    margin-top:320px;
+  }
+
+  position: relative;
+  @apply mx-auto;
+  @apply md:mx-16;
+  @apply lg:mx-28;
+}
+
+.content {
+  position: static;
+  @screen lg {
+    position: absolute;
+    top: 250px;
+  }
+  @screen xl {
+    position: absolute;
+    top: 200px;
+  }
+  @screen 2xl {
+    position: absolute;
+    top: 180px;
+  }
+
+  h2 {
+    @apply text-center;
+    @apply md:text-left;
+    @apply text-2xl;
+    @apply md:text-4xl;
+
+    span {
+      font-family: 'norse', 'Times New Roman', Times,serif;
+    }
+  }
+
+  margin-bottom: 3rem;
+
+}
+
+.picture {
+  @apply flex;
+  @apply items-start;
+  @apply md:items-center;
+  @apply m-auto;
+  
+  @apply lg:h-full;
+
+  min-width: 60%;
+  max-width: 75%;
+  @screen lg {
+    min-width: 300px;
+    max-width: 50%;
+  }
+}

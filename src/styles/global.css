@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Mulish:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500;1,700&display=swap');
+@import "./fonts.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1D0B1E;
+}
+
+* {
+  font-family:Comfortaa, Verdana, Arial, sans-serif;
+  color: white;
+}

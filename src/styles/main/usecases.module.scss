@@ -1,0 +1,72 @@
+@import '../mixins';
+
+.container {
+  @include home-section;
+
+
+  @apply flex;
+  @apply flex-wrap;
+  @apply justify-center;
+  @apply md:justify-between;
+
+  max-width: 83.34%;
+  @screen md {
+    max-width: auto;
+  }
+  @apply mx-auto;
+  @apply md:mx-16;
+  @apply lg:mx-28;
+
+}
+
+.content {
+  min-width: 300px;
+  max-width: 83.34%;
+  @screen md {
+    max-width: 50%;
+    min-width: 420px;
+  }
+
+  @apply flex-1;
+  @apply flex;
+  @apply flex-col;
+  @apply flex-nowrap;
+
+  h2 {
+    @apply text-center;
+    @apply md:text-left;
+    @apply text-2xl;
+    @apply md:text-4xl;
+
+    span {
+      font-family: 'norse', 'Times New Roman', Times,serif;
+    }
+  }
+
+  p{
+    @apply text-base;
+    @apply md:text-2xl;
+    @apply my-5;
+    @apply md:my-10;
+
+    font-weight: 500;
+    line-height: 2.75rem;
+    
+    h3 {
+      font-weight: 700;
+    }
+  }
+}
+
+.picture {
+  @apply flex-1;
+  @apply mx-auto;
+  
+  min-width: 60%;
+  max-width: 65%;
+  @screen md {
+    min-width: 350px;
+    max-width: 45%;
+  }
+
+}

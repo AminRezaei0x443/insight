@@ -1,0 +1,48 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+
+.button{
+  @apply px-4;
+  @apply md:px-6;
+  @apply lg:px-8;
+
+  @apply flex;
+  flex-flow: row nowrap;
+  @apply items-center;
+  @apply justify-center;
+
+  @apply text-xs;
+  @apply md:text-lg;
+  @apply lg:text-xl;
+  @apply outline-none;
+  @apply border-none;
+  @apply m-0;
+  @apply font-bold;
+  
+  background: $default-button-gradient;
+  border-radius: 40px;
+  
+  @include hover-effect;
+
+  min-width: 75px;
+  min-height: 30px;
+  @screen md {
+    min-width: 120px;
+    min-height: 50px;
+  }
+  @screen lg {
+    min-width: 140px;
+    min-height: 60px;
+  }
+
+  svg {
+    @apply w-4;
+    @apply h-4;
+    @apply md:w-6;
+    @apply md:h-6;
+  }
+}
+
+.secondaryBackground{
+  background: $alternate-button-gradient;
+}

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "norse";
+  src: url("/assets/fonts/Norse-KaWl.otf") format("otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "norse";
+  src: url("/assets/fonts/NorseBold-2Kge.otf") format("otf");
+  font-weight: bold;
+}
