@@ -10,7 +10,7 @@ import styles from '@/styles/main/header.module.scss';
 
 function Open() {
   return (
-    <Link href="https://felan.vercel.com" passHref>
+    <Link href="https://insight-d.vercel.app/" passHref>
       <a>
         <Button>Open App</Button>
       </a>
